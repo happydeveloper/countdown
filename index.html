@@ -18,7 +18,7 @@
             grid-template-rows: 1fr 400px 1fr;
             height:100vh;
         }
-        .githubinfo{
+        .o2info{
             display: none;
             position: absolute;
             bottom: 10px;
@@ -44,9 +44,7 @@
         </div>
         <div></div>
     </div>
-    <div class="githubinfo"><a href="https://opentutorials.org/module/1588/12591">내가 할 수 있는 것을 남도 할수 있게, 남이 할 수 있는 것을 나도 할 수 있게</a></div>
-    <div class="githubinfo"><a href="https://github.com/egoing/countdown">timer source : https://github.com/egoing/countdown</a></div>
-    
+    <div class="o2info"><a href="https://opentutorials.org/module/1588/12591">내가 할 수 있는 것을 남도 할수 있게, 남이 할 수 있는 것을 나도 할 수 있게</a></div>    
     <script>
         var duration = Number(prompt('분을 알려주세요.') * 60 * 1000);
         var container = document.querySelector('#container');
@@ -87,7 +85,7 @@
                     document.querySelector('#container').classList.add('infinite');
                     document.querySelector('#container').classList.add('pulse');
                     endFlag = true;
-                    document.querySelector('.githubinfo').style.display = 'block';
+                    document.querySelector('.o2info').style.display = 'block';
                 }
                 if (m === 0){
                     circle.setText(s);

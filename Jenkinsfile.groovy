@@ -5,7 +5,7 @@ pipeline {
           steps {
               echo 'Build'
               npm install
-             npx webpack --mode=production
+              npx webpack --mode=production
           }
       }
       stage('Test') {

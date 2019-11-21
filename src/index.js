@@ -1,14 +1,9 @@
- import './style.css';
- import ProgressBar  from 'progressbar.js';
+import './style.css';
+import ProgressBar  from 'progressbar.js';
 
-var qt="1.1";
-var bg ="puppy";
-var destElem ="";
-var bgChanged = false;
-var hurryupFlag = false;
-var endFlag = false;
+// import { util } from './util.js';
 
-function getQueryVariable(variable) {
+ function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');
     for (var i = 0; i < vars.length; i++) {
@@ -19,15 +14,29 @@ function getQueryVariable(variable) {
     }
 }
 
+function getDestTime(duration){
+    var ts = ((new Date()).getTime() / 1000)*1000 + duration;
+    var date = new Date(ts);
+   return date.getHours()+":"+('0'+date.getMinutes()).slice(-2);
+}
+
+
+var qt="1.1";
+var bg ="puppy";
+var destElem ="";
+var bgChanged = false;
+var hurryupFlag = false;
+var endFlag = false;
+
+
+
 if(qt = getQueryVariable('t')){
     var duration = Number(qt) * 60 * 1000;
 } else {
     var duration = Number(prompt('분을 알려주세요.') * 60 * 1000);
 }
 
-var ts = ((new Date()).getTime() / 1000)*1000 + duration;
-var date = new Date(ts);
-var dest = date.getHours()+":"+('0'+date.getMinutes()).slice(-2);
+var dest = getDestTime(duration);
 
 if(bg = getQueryVariable('bg')) {
     document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?"+bg+")";

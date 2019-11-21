@@ -1,8 +1,6 @@
 import './style.css';
 import ProgressBar  from 'progressbar.js';
 
-// import { util } from './util.js';
-
  function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');

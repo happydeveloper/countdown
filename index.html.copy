@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <script src="./bower_components/progressbar.js/dist/progressbar.min.js"></script>
+    <link rel="stylesheet" href="./bower_components/animate.css/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link rel= "stylesheet" type="text/css" href="./src/style.css">
+</head>
+
+<body>
+    <div id="ver">
+        <div></div>
+        <div id="hor">
+            <div></div>
+            <div id="container"></div>
+            <div></div>
+        </div>
+        <div></div>
+    </div>
+
+    <!-- <div class="o2info"><a href="https://opentutorials.org/module/1588/12591">내가 할 수 있는 것을 남도 할수 있게, 남이 할 수 있는 것을 나도 할 수 있게</a></div>  -->  
+    
+    <div class="githubinfo"><a href="https://github.com/egoing/countdown">source code<a></div>
+    
+    <script src="./dist/main.js"></script>
+</body>
+
+</html>

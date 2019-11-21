@@ -1,3 +1,9 @@
+ import './style.css';
+ import ProgressBar  from 'progressbar.js';
+
+var qt="1.1";
+var bg ="puppy";
+var destElem ="";
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');
@@ -65,7 +71,7 @@ var bar = new ProgressBar.Circle(container, {
             document.querySelector('#container').classList.add('pulse');
             document.querySelector('#container').classList.add('delay-1s');
             endFlag = true;
-            document.querySelector('.o2info').style.display = 'block';
+            document.querySelector('.githubinfo').style.display = 'block';
         }
         if (m === 0){
             circle.setText(s);

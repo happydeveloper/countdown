@@ -2,8 +2,10 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
     <script src="./bower_components/progressbar.js/dist/progressbar.min.js"></script>
     <link rel="stylesheet" href="./bower_components/animate.css/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,16 +22,43 @@
         }
         .o2info{
             display: none;
+            text-decoration: none;
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
             position: absolute;
             bottom: 10px;
             right: 10px;
             font-size:1rem;
         }
+        .githubinfo a{
+            color:white;
+            text-decoration: none;
+            font-family: 'Open Sans Condensed', sans-serif;
+
+        }
+        .dest{
+            padding: 0;
+            color: white;
+            font-size: 0.5em;
+            text-align: center;
+            /* height: 0; */
+            height:0;
+            position: absolute;
+            width: 100%;
+            top:-48px;
+            font-family: 'Open Sans Condensed', cursive;
+            
+        }
         body{
             font-family: 'Bungee', cursive;
             font-size:6rem;
             margin:0;
+            /*
             background-image:url('https://source.unsplash.com/1600x900/?puppy');
+            background-image:url('https://source.unsplash.com/1600x900/?relax'); 
+            */
+
             background-size:cover;
             overflow:hidden;
             backdrop-filter: grayscale(100%);
@@ -44,9 +73,40 @@
         </div>
         <div></div>
     </div>
-    <div class="o2info"><a href="https://opentutorials.org/module/1588/12591">내가 할 수 있는 것을 남도 할수 있게, 남이 할 수 있는 것을 나도 할 수 있게</a></div>    
+
+    <!-- <div class="o2info"><a href="https://opentutorials.org/module/1588/12591">내가 할 수 있는 것을 남도 할수 있게, 남이 할 수 있는 것을 나도 할 수 있게</a></div>  -->  
+    
+    <div class="githubinfo"><a href="https://github.com/egoing/countdown">source code<a></div>
+    
     <script>
-        var duration = Number(prompt('분을 알려주세요.') * 60 * 1000);
+
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split('=');
+                if (decodeURIComponent(pair[0]) == variable) {
+                    return decodeURIComponent(pair[1]);
+                }
+            }
+        }
+
+        if(qt = getQueryVariable('t')){
+            var duration = Number(qt) * 60 * 1000;
+        } else {
+            var duration = Number(prompt('분을 알려주세요.') * 60 * 1000);
+        }
+
+        var ts = ((new Date()).getTime() / 1000)*1000 + duration;
+        var date = new Date(ts);
+        var dest = date.getHours()+":"+('0'+date.getMinutes()).slice(-2);
+        
+        if(bg = getQueryVariable('bg')) {
+            document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?"+bg+")";
+        } else {
+            document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?structure')";
+        }
+        
         var container = document.querySelector('#container');
         var bgChanged = false;
         var hurryupFlag = false;
@@ -58,12 +118,13 @@
                 width: '400px'
             },
             strokeWidth:10,
-            trailColor: 'rgba(0,0,0,0.5)',
-            color:'rgba(0,255,0,0.4)',
+            trailColor: 'rgba(0,0,0,0.8)',
+            color:'rgba(0,255,0,0.8)',
             text: {
                 value: 'Text'
             },
             step: function(state, circle, attachment) {
+                // debugger;
                 var remained = Math.floor(duration*(1-circle.value())/1000);
                 var m = Math.floor(remained/60);
                 var s = remained%60;
@@ -84,19 +145,24 @@
                     document.querySelector('#container').classList.add('animated');
                     document.querySelector('#container').classList.add('infinite');
                     document.querySelector('#container').classList.add('pulse');
+                    document.querySelector('#container').classList.add('delay-1s');
                     endFlag = true;
                     document.querySelector('.o2info').style.display = 'block';
                 }
                 if (m === 0){
                     circle.setText(s);
-                    bar.text.style.color='rgba(255,0,0,0.5)';
-                    bar.path.setAttribute('stroke','rgba(255,0,0,0.5)')
+                    if(bar){
+                        bar.text.style.color='rgba(255,0,0,1)';
+                        bar.path.setAttribute('stroke','rgba(255,0,0,1)')
+                    }
                 } else {
-                    circle.setText(m+':'+s);
+                    destElem = '<div class="dest">'+dest+'</div>';
+                    circle.setText(destElem+m+':'+s);
                 }
             }
         });
         bar.animate(1.0);
+        // bar.stop();
     </script>
 </body>
 

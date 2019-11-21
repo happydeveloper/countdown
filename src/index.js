@@ -4,6 +4,10 @@
 var qt="1.1";
 var bg ="puppy";
 var destElem ="";
+var bgChanged = false;
+var hurryupFlag = false;
+var endFlag = false;
+
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');
@@ -32,9 +36,7 @@ if(bg = getQueryVariable('bg')) {
 }
 
 var container = document.querySelector('#container');
-var bgChanged = false;
-var hurryupFlag = false;
-var endFlag = false;
+
 var bar = new ProgressBar.Circle(container, {
     duration: duration,
     svgStyle: {

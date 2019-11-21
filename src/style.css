@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
+@import "~animate.css/animate.min.css";
+@import "~animate.css/source/_base.css";
+
 #hor {
     display: grid;
     grid-template-columns: 1fr 400px 1fr;

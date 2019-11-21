@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee&display=swap');
+#hor {
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr;
+}
+#ver{
+    display: grid;
+    grid-template-rows: 1fr 400px 1fr;
+    height:100vh;
+}
+.o2info{
+    display: none;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size:1rem;
+}
+.githubinfo a{
+    color:white;
+    text-decoration: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+
+}
+.dest{
+    padding: 0;
+    color: white;
+    font-size: 0.5em;
+    text-align: center;
+    /* height: 0; */
+    height:0;
+    position: absolute;
+    width: 100%;
+    top:-48px;
+    font-family: 'Open Sans Condensed', cursive;
+    
+}
+body{
+    font-family: 'Bungee', cursive;
+    font-size:6rem;
+    margin:0;
+    /*
+    background-image:url('https://source.unsplash.com/1600x900/?puppy');
+    background-image:url('https://source.unsplash.com/1600x900/?relax'); 
+    */
+
+    background-size:cover;
+    overflow:hidden;
+    backdrop-filter: grayscale(100%);
+}

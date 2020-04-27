@@ -1,6 +1,17 @@
 import './style.css';
 import ProgressBar  from 'progressbar.js';
 
+var qt="1.1";
+var bg ="puppy";
+var destElem ="";
+
+var bgChanged = false;
+var hurryupFlag = false;
+var endFlag = false;
+
+var queue;
+
+
  function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');
@@ -19,17 +30,13 @@ function getDestTime(duration){
 }
 
 
-var qt="1.1";
-var bg ="puppy";
-var destElem ="";
-var bgChanged = false;
-var hurryupFlag = false;
-var endFlag = false;
-
-
-
 if(qt = getQueryVariable('t')){
-    var duration = Number(qt) * 60 * 1000;
+    queue = qt.split(',');
+    if (queue.length > 0) {
+        var duration = Number(queue[0]) * 60 * 1000;
+    } else {
+        var duration = Number(qt) * 60 * 1000;
+    }
 } else {
     var duration = Number(prompt('분을 알려주세요.') * 60 * 1000);
 }
@@ -57,14 +64,14 @@ var bar = new ProgressBar.Circle(container, {
         value: 'Text'
     },
     step: function(state, circle, attachment) {
-        // debugger;
+         
         var remained = Math.floor(duration*(1-circle.value())/1000);
         var m = Math.floor(remained/60);
         var s = remained%60;
         if(!bgChanged && m === 0){
-            bgChanged = true;
             document.querySelector('body').style.backgroundImage = "url('https://source.unsplash.com/1600x900/?code')";
             document.querySelector('body').style.backgroundSize = "cover";
+            bgChanged = true;
         }
         if(!hurryupFlag && (m === 0 && s < 30)){
             document.querySelector('#container').classList.add('animated');
@@ -79,10 +86,17 @@ var bar = new ProgressBar.Circle(container, {
             document.querySelector('#container').classList.add('infinite');
             document.querySelector('#container').classList.add('pulse');
             document.querySelector('#container').classList.add('delay-1s');
-            endFlag = true;
             document.querySelector('.githubinfo').style.display = 'block';
+            endFlag = true;
         }
         if (m === 0){
+            if (endFlag == true && queue.length > 1){
+                var queryStr = qt.replace(queue[0]+",","");
+                var url = window.location.hostname;
+                window.location.href ="/?t="+queryStr+"&bg="+bg;
+                console.log("timer2 on----------" + bg);
+            }
+            
             circle.setText(s);
             if(bar){
                 bar.text.style.color='rgba(255,0,0,1)';

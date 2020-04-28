@@ -68,6 +68,8 @@ function openFullScreenMode() {
         docV.msRequestFullscreen();
 }
 
+openFullScreenMode();
+
 var bar = new ProgressBar.Circle(container, {
     duration: duration,
     svgStyle: {

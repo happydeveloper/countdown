@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 import ProgressBar  from 'progressbar.js';
 
 var qt="1.1";

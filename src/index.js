@@ -60,7 +60,7 @@ var bgDoc = document.documentElement;
 
 function openFullScreenMode() {    
     if (bgDoc.requestFullscreen) {
-        requestFullscreen();
+        bgDoc.requestFullscreen();
     } else if (bgDoc.webkitRequestFullscreen) { // Chrome, Safari (webkit)
         bgDoc.webkitRequestFullscreen();
     } else if (bgDoc.mozRequestFullScreen) { // Firefox

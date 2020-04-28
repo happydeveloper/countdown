@@ -64,7 +64,7 @@ function openFullscreen() {
         if (elem.requestFullscreen) {
             elem.requestFullscreen().catch(err=>{
                 console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-                
+
             });
           } else if (elem.mozRequestFullScreen) { /* Firefox */
             elem.mozRequestFullScreen();
@@ -107,9 +107,9 @@ function openFullScreenMode() {
 try {
     
     setTimeout(() => {
-        //openFullScreenMode();
+        openFullScreenMode();
         //toggleFullscreen();
-        openFullscreen();
+        //openFullscreen();
     }, 3000);
 } catch (error) {
         console.log("에러발생 : " + error);

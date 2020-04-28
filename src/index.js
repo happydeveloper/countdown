@@ -66,17 +66,17 @@ function toggleFullscreen() {
     } else {
       document.exitFullscreen();
     }
-  }
-
-
-try {
-    setTimeout(() => {
-        document.querySelector('body').addEventListener('click',toggleFullscreen())
-    }, 1000);
-} catch (error) {
-        console.log("에러발생 : " + error);
-        window.location.href ="/?t="+queryStr+"&bg="+bg;
 }
+
+document.querySelector('body').addEventListener('click',toggleFullscreen()
+// try {
+//     setTimeout(() => {
+//         )
+//     }, 1000);
+// } catch (error) {
+//         console.log("에러발생 : " + error);
+//         window.location.href ="/?t="+queryStr+"&bg="+bg;
+// }
 
 
 

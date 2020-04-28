@@ -55,7 +55,7 @@ if(bg = getQueryVariable('bg')) {
 
 var container = document.querySelector('#container');
 //전체화면 스크립트
-var docV = document.documentElement;
+var docV = ;
 // 전체화면 설정
 function openFullScreenMode(docV) {
     if (docV.requestFullscreen)
@@ -68,7 +68,7 @@ function openFullScreenMode(docV) {
         docV.msRequestFullscreen();
 }
 
-openFullScreenMode();
+openFullScreenMode(document.documentElement);
 
 
 var bar = new ProgressBar.Circle(container, {

@@ -74,8 +74,9 @@ try {
     window.openFullScreenMode();
 } catch (error) {
     console.log("에러발생 : " + error);
-    var queryStr = qt;
+    
     setTimeout(() => {
+        var queryStr = qt;
         window.location.href ="/?t="+queryStr+"&bg="+bg;
     }, 1500);
     

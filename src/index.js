@@ -72,7 +72,7 @@ function openFullScreenMode() {
 try {
     window.openFullScreenMode();
 } catch (error) {
-    console.log(error);
+    console.log("에러발생 : " + error);
     var queryStr = qt;
     window.location.href ="/?t="+queryStr+"&bg="+bg;
 }

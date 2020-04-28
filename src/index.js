@@ -72,7 +72,7 @@ function toggleFullscreen() {
 
 try {
     setTimeout(() => {
-        document.querySelector('body').addEventListener('click',toggleFullscreen());
+        document.querySelector('body').addEventListener('click',toggleFullscreen())
     }, 1000);
 } catch (error) {
         console.log("에러발생 : " + error);

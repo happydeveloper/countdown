@@ -1,7 +1,26 @@
 //전체화면 스크립트
 var docV = document.documentElement;
-docV.requestFullscreen();
-docV.webkitRequestFullscreen();
+// 전체화면 설정
+function openFullScreenMode() {
+    if (docV.requestFullscreen)
+        docV.requestFullscreen();
+    else if (docV.webkitRequestFullscreen) // Chrome, Safari (webkit)
+        docV.webkitRequestFullscreen();
+    else if (docV.mozRequestFullScreen) // Firefox
+        docV.mozRequestFullScreen();
+    else if (docV.msRequestFullscreen) // IE or Edge
+        docV.msRequestFullscreen();
+}
 
-webkitRequestFullscreen
+// 전체화면 해제
+function closeFullScreenMode() {
+    if (document.exitFullscreen)
+        document.exitFullscreen();
+    else if (document.webkitExitFullscreen) // Chrome, Safari (webkit)
+        document.webkitExitFullscreen();
+    else if (document.mozCancelFullScreen) // Firefox
+        document.mozCancelFullScreen();
+    else if (document.msExitFullscreen) // IE or Edge
+        document.msExitFullscreen();
+}
 //동작확인

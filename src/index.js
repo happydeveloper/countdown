@@ -83,6 +83,7 @@ function toggleFullscreen() {
     if (!document.fullscreenElement) {
       elem.requestFullscreen().catch(err => {
         console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+        
         toggleFullscreen();
       });
     } else {

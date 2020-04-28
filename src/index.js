@@ -110,7 +110,7 @@ try {
         openFullScreenMode();
         //toggleFullscreen();
         //openFullscreen();
-    }, 3000);
+    }, 1500);
 } catch (error) {
         console.log("에러발생 : " + error);
         var queryStr = qt;

@@ -73,9 +73,7 @@ try {
     window.openFullScreenMode();
 } catch (error) {
     console.log(error);
-    window.location.href='./'
     var queryStr = qt;
-    var url = window.location.hostname;
     window.location.href ="/?t="+queryStr+"&bg="+bg;
 }
 

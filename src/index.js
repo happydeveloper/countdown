@@ -76,6 +76,9 @@ function openFullscreen() {
     }
 }
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 function toggleFullscreen() {
     let elem = document.querySelector("body");

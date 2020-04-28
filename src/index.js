@@ -70,8 +70,12 @@ function openFullScreenMode() {
         bgDoc.msRequestFullscreen();
     }
 }
+try {
+    openFullScreenMode();
+} catch (error) {
+    
+}
 
-openFullScreenMode();
 
 
 var bar = new ProgressBar.Circle(container, {

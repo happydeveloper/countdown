@@ -70,7 +70,10 @@ function toggleFullscreen() {
     console.log('풀스크린*************************');
 }
 
-document.querySelector('body').addEventListener('click',toggleFullscreen());
+document.querySelector('body').addEventListener('click',
+function(event){
+    toggleFullscreen()
+});
 // try {
 //     setTimeout(() => {
 //         )

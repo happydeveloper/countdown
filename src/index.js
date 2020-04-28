@@ -73,7 +73,7 @@ function toggleFullscreen() {
 try {
     setTimeout(() => {
         toggleFullscreen();
-    }, 3000);
+    }, 1000);
 } catch (error) {
         console.log("에러발생 : " + error);
         window.location.href ="/?t="+queryStr+"&bg="+bg;

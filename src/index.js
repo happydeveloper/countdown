@@ -73,7 +73,7 @@ try {
     window.openFullScreenMode();
 } catch (error) {
     console.log(error);
-    openFullScreenMode();
+    window.location.href='.'
 }
 
 

@@ -55,17 +55,6 @@ if(bg = getQueryVariable('bg')) {
 
 var container = document.querySelector('#container');
 
-// 전체화면 설정
-function openFullScreenMode(brower) {
-    if (brower.requestFullscreen)
-        brower.requestFullscreen();
-    else if (brower.webkitRequestFullscreen) // Chrome, Safari (webkit)
-        brower.webkitRequestFullscreen();
-    else if (brower.mozRequestFullScreen) // Firefox
-        brower.mozRequestFullScreen();
-    else if (docV.msRequestFullscreen) // IE or Edge
-        brower.msRequestFullscreen();
-}
 
 openFullScreenMode(document.documentElement);
 

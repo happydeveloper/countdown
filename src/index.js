@@ -61,7 +61,7 @@ bgDoc.webkitRequestFullscreen();
 
 function openFullScreenMode() {    
     if (bgDoc.requestFullscreen) {
-        //bgDoc.requestFullscreen();
+        requestFullscreen();
     } else if (bgDoc.webkitRequestFullscreen) { // Chrome, Safari (webkit)
         bgDoc.webkitRequestFullscreen();
     } else if (bgDoc.mozRequestFullScreen) { // Firefox

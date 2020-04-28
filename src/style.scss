@@ -41,7 +41,7 @@ $base-font: 'Open Sans Condensed', cursive;
     position: absolute;
     width: 100%;
     top:-48px;
-    font-family: 'Open Sans Condensed', cursive;
+    font-family: $base-font;
 }
 
 body{

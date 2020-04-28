@@ -57,7 +57,7 @@ var container = document.querySelector('#container');
 //전체화면 스크립트
 var docV = document.documentElement;
 // 전체화면 설정
-function openFullScreenMode() {
+function openFullScreenMode(docV) {
     if (docV.requestFullscreen)
         docV.requestFullscreen();
     else if (docV.webkitRequestFullscreen) // Chrome, Safari (webkit)
@@ -69,6 +69,7 @@ function openFullScreenMode() {
 }
 
 openFullScreenMode();
+
 
 var bar = new ProgressBar.Circle(container, {
     duration: duration,

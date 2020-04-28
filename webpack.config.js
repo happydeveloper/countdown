@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin')
  
 module.exports = {
-    mode:'development',
+    mode:'development', // production 설정 파일에서는 'production'
    
     entry: './src/index.js',
     

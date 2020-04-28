@@ -5,17 +5,18 @@
 
 $base-color: white;
 $base-font: 'Open Sans Condensed', cursive;
+$base-ratio: 1fr 400px 1fr;
 
 #hor , #ver {
     display: grid;
 }
 
 #hor {
-    grid-template-columns: 1fr 400px 1fr;
+    grid-template-columns: $base-ratio;
 }
 
 #ver {
-    grid-template-rows: 1fr 400px 1fr;
+    grid-template-rows: $base-ratio;
     height:100vh;
 }
 

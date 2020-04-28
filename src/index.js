@@ -55,7 +55,8 @@ if(bg = getQueryVariable('bg')) {
 
 var container = document.querySelector('#container');
 // 전체화면 설정
-function openFullScreenMode(bgDoc) {
+function openFullScreenMode() {
+    var bgDoc = document.documentElement;
     if (bgDoc.requestFullscreen) {
         bgDoc.requestFullscreen();
     } else if (bgDoc.webkitRequestFullscreen) { // Chrome, Safari (webkit)
@@ -67,7 +68,7 @@ function openFullScreenMode(bgDoc) {
     }
 }
 
-openFullScreenMode(document.documentElement);
+openFullScreenMode();
 
 
 var bar = new ProgressBar.Circle(container, {

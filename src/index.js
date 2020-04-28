@@ -58,7 +58,6 @@ var container = document.querySelector('#container');
 var docV = document.documentElement;
 docV.requestFullscreen();
 docV.requestFullscreen();
-
 //동작확인
 
 var bar = new ProgressBar.Circle(container, {

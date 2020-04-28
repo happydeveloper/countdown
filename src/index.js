@@ -116,8 +116,8 @@ try {
     }, 1500);
 } catch (error) {
         console.log("에러발생 : " + error);
-        var queryStr = qt;
-        window.location.href ="/?t="+queryStr+"&bg="+bg;
+        //var queryStr = qt;
+        //window.location.href ="/?t="+queryStr+"&bg="+bg;
 }
 
 

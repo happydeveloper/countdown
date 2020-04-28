@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Bungee&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap");
+@import '~animate.css/animate.min';
+@import '~animate.css/source/_base';
+
+$base-color: white;
+$base-font: 'Open Sans Condensed', cursive;
+$base-ratio: 1fr 400px 1fr;
+
+#hor , #ver {
+    display: grid;
+}
+
+#hor {
+    grid-template-columns: $base-ratio;
+}
+
+#ver {
+    grid-template-rows: $base-ratio;
+    height:100vh;
+}
+
+.dest{
+    color: $base-color;
+    font-family: $base-font;
+    
+    padding: 0;
+    font-size: 0.5em;
+    text-align: center;
+    height:0;
+    position: absolute;
+    width: 100%;
+    top:-48px;
+    
+}
+
+body{
+    font-family: $base-font;
+    font-size:6rem;
+    margin:0;
+    min-width: 600px;
+    min-height: 100%;
+    max-width: 100%;
+    height: auto;
+    background: url('https://source.unsplash.com/1600x900/?puppy') center center / cover no-repeat;
+    background-size:cover;
+    overflow:hidden;
+    backdrop-filter: grayscale(100%);    
+}
+
+@media  screen and (min-width: 780px) {
+    body {
+        background-image:url('https://source.unsplash.com/800x600/?puppy');
+    }
+}
+
+
+.githubinfo {
+     a{
+        color: $base-color;
+        font-family: $base-font;
+        text-decoration: none;
+     }
+}
+
+
+.o2info{
+    display: none;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size:1rem;
+}

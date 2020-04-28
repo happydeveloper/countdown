@@ -50,7 +50,7 @@ var dest = getDestTime(duration);
 if(bg = getQueryVariable('bg')) {
     document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?"+bg+")";
 } else {
-    document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?structure')";
+    document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?puppy')";
 }
 
 var container = document.querySelector('#container');

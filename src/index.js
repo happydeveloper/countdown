@@ -73,7 +73,8 @@ function openFullScreenMode() {
 try {
     openFullScreenMode();
 } catch (error) {
-    console.log(error)
+    console.log(error);
+    openFullScreenMode();
 }
 
 

@@ -20,19 +20,6 @@ $base-ratio: 1fr 400px 1fr;
     height:100vh;
 }
 
-.o2info{
-    display: none;
-    text-decoration: none;
-    width: 100%;
-    text-align: center;
-    font-size: 1em;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size:1rem;
-}
-
-
 .dest{
     color: $base-color;
     font-family: $base-font;
@@ -63,4 +50,17 @@ body{
         font-family: $base-font;
         text-decoration: none;
      }
+}
+
+
+.o2info{
+    display: none;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size:1rem;
 }

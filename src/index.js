@@ -95,14 +95,7 @@ function(event){
         openFullscreen();
     }
 }, false);
-// try {
-//     setTimeout(() => {
-//         )
-//     }, 1000);
-// } catch (error) {
-//         console.log("에러발생 : " + error);
-//         window.location.href ="/?t="+queryStr+"&bg="+bg;
-// }
+
 
 
 

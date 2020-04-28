@@ -104,7 +104,8 @@ try {
     setTimeout(() => {
         //openFullScreenMode();
         //toggleFullscreen();
-    }, 1500);
+        openFullscreen();
+    }, 3000);
 } catch (error) {
         console.log("에러발생 : " + error);
         var queryStr = qt;

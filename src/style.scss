@@ -43,12 +43,14 @@ body{
     overflow:hidden;
     backdrop-filter: grayscale(100%);    
 }
+
 @media screen and (max-width: 1600px) {
     .class{
-        left: 50%;
-        margin-left: -800px;  
-            }
-    }| 원본문서 http://xecenter.com/xe/914
+            left: 50%;
+            margin-left: -800px;  
+    }
+}
+
 
 .githubinfo {
      a{

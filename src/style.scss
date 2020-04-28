@@ -38,6 +38,7 @@ body{
     font-family: $base-font;
     font-size:6rem;
     margin:0;
+    min-width: 1600px;
     background-image:url('https://source.unsplash.com/1600x900/?puppy');
     background-size:cover;
     overflow:hidden;

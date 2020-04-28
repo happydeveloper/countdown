@@ -59,7 +59,7 @@ var container = document.querySelector('#container');
 var bgDoc = document.documentElement;
 
 function toggleFullscreen() {
-    let elem = document.querySelector("video");
+    let elem = document.querySelector("body");
   
     if (!document.fullscreenElement) {
       elem.requestFullscreen().catch(err => {

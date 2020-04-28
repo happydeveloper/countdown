@@ -6,13 +6,12 @@
 #hor , #ver {
     display: grid;
 }
+
 #hor {
-    display: grid;
     grid-template-columns: 1fr 400px 1fr;
 }
 
 #ver{
-    display: grid;
     grid-template-rows: 1fr 400px 1fr;
     height:100vh;
 }

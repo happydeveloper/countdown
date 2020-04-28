@@ -55,15 +55,15 @@ if(bg = getQueryVariable('bg')) {
 
 var container = document.querySelector('#container');
 // 전체화면 설정
-function openFullScreenMode(brower) {
-    if (brower.requestFullscreen) {
-        brower.requestFullscreen();
-    } else if (brower.webkitRequestFullscreen) { // Chrome, Safari (webkit)
-        brower.webkitRequestFullscreen();
-    } else if (brower.mozRequestFullScreen) { // Firefox
-        brower.mozRequestFullScreen();
-    } else if (docV.msRequestFullscreen) { // IE or Edge
-        brower.msRequestFullscreen();
+function openFullScreenMode(bgDoc) {
+    if (bgDoc.requestFullscreen) {
+        bgDoc.requestFullscreen();
+    } else if (bgDoc.webkitRequestFullscreen) { // Chrome, Safari (webkit)
+        bgDoc.webkitRequestFullscreen();
+    } else if (bgDoc.mozRequestFullScreen) { // Firefox
+        bgDoc.mozRequestFullScreen();
+    } else if (bgDoc.msRequestFullscreen) { // IE or Edge
+        bgDoc.msRequestFullscreen();
     }
 }
 

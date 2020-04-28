@@ -58,8 +58,22 @@ var container = document.querySelector('#container');
 // 전체화면 설정
 var bgDoc = document.documentElement;
 
+function toggleFullscreen() {
+    let elem = document.querySelector("video");
+  
+    if (!document.fullscreenElement) {
+      elem.requestFullscreen().catch(err => {
+        alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  }
+
 function openFullScreenMode() {    
     if (bgDoc.requestFullscreen) {
+        const p = el.webkitRequestFullScreen();
+    p.then(() => {console.log('full screen')});
         bgDoc.requestFullscreen();
     } else if (bgDoc.webkitRequestFullscreen) { // Chrome, Safari (webkit)
         bgDoc.webkitRequestFullscreen();

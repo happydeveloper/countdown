@@ -57,7 +57,6 @@ var container = document.querySelector('#container');
 
 // 전체화면 설정
 var bgDoc = document.documentElement;
-bgDoc.webkitRequestFullscreen();
 
 function openFullScreenMode() {    
     if (bgDoc.requestFullscreen) {

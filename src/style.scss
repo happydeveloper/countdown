@@ -48,7 +48,7 @@ body{
     backdrop-filter: grayscale(100%);    
 }
 
-@media screen and (max-width: 1600px) {
+@media only screen and (min-width: 780px) {
     body {
         //left: 50%;
         //margin-left: -800px;  

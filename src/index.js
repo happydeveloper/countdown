@@ -67,7 +67,7 @@ function toggleFullscreen() {
     } else {
       document.exitFullscreen();
     }
-    console.log('풀스크린');
+    console.log('풀스크린*************************');
 }
 
 document.querySelector('body').addEventListener('click',toggleFullscreen());

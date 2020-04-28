@@ -73,15 +73,10 @@ function toggleFullscreen() {
 document.querySelector('body').addEventListener("keypress",
 function(event){
     if(event.keyCode == 13) {
-    window.scrollTo(0,1);
-    toggleFullscreen();
+        window.scrollTo(0,1);
+        toggleFullscreen();
     }
-});
-document.addEventListener(“keypress”, function(e) {
-        if (e.keyCode === 13) {
-        toggleFullScreen();
-        }
-    }, false);
+}, false);
 // try {
 //     setTimeout(() => {
 //         )

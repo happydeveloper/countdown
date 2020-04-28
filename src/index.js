@@ -55,9 +55,9 @@ if(bg = getQueryVariable('bg')) {
 
 var container = document.querySelector('#container');
 //전체화면 스크립트
-var docV = document.documentElement;
-docV.requestFullscreen();
-docV.requestFullscreen();
+var bgDoc = document.documentElement;
+bgDoc.requestFullscreen();
+bgDoc.requestFullscreen();
 //동작확인
 
 var bar = new ProgressBar.Circle(container, {

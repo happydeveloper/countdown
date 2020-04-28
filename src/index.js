@@ -113,7 +113,7 @@ try {
         //openFullScreenMode();
         toggleFullscreen();
         //openFullscreen();
-    }, 1500);
+    }, 3000);
 } catch (error) {
         console.log("에러발생 : " + error);
         //var queryStr = qt;

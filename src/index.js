@@ -41,6 +41,10 @@ if(qt = getQueryVariable('t')){
     var duration = Number(prompt('분을 알려주세요.') * 60 * 1000);
 }
 
+if(getQueryVariable('gray') === "1") {
+    document.body.style.filter = "grayscale(100%)";
+} 
+
 var dest = getDestTime(duration);
 
 if(bg = getQueryVariable('bg')) {

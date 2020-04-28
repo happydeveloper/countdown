@@ -58,7 +58,7 @@ var container = document.querySelector('#container');
 function openFullScreenMode() {
     var bgDoc = document.documentElement;
     if (bgDoc.requestFullscreen) {
-        bgDoc.webkitRequestFullscreen();
+        bgDoc.requestFullscreen();
     } else if (bgDoc.webkitRequestFullscreen) { // Chrome, Safari (webkit)
         bgDoc.webkitRequestFullscreen();
     } else if (bgDoc.mozRequestFullScreen) { // Firefox

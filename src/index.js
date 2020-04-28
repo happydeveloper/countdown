@@ -56,7 +56,7 @@ if(bg = getQueryVariable('bg')) {
 var container = document.querySelector('#container');
 //전체화면 스크립트
 var bgDoc = document.documentElement; //백그라운드 문서
-bgDoc.requestFullscreen();
+//bgDoc.requestFullscreen();
 bgDoc.webkitRequestFullscreen();
 //동작확인
 

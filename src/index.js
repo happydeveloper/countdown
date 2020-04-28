@@ -70,11 +70,18 @@ function toggleFullscreen() {
     console.log('풀스크린*************************');
 }
 
-document.querySelector('body').addEventListener('click',
+document.querySelector('body').addEventListener("keypress",
 function(event){
+    if(event.keyCode == 13) {
     window.scrollTo(0,1);
     toggleFullscreen();
+    }
 });
+document.addEventListener(“keypress”, function(e) {
+        if (e.keyCode === 13) {
+        toggleFullScreen();
+        }
+    }, false);
 // try {
 //     setTimeout(() => {
 //         )

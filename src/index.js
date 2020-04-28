@@ -55,26 +55,7 @@ if(bg = getQueryVariable('bg')) {
 
 var container = document.querySelector('#container');
 
-// 전체화면 설정
-var bgDoc = document.documentElement;
 
-var elem = document.documentElement;
-function openFullscreen() {
-    if(!document.fullscreenElement) {
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen().catch(err=>{
-                console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-                openFullscreen();
-            });
-          } else if (elem.mozRequestFullScreen) { /* Firefox */
-            elem.mozRequestFullScreen();
-          } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-            elem.webkitRequestFullscreen();
-          } else if (elem.msRequestFullscreen) { /* IE/Edge */
-            elem.msRequestFullscreen();
-          }
-    }
-}
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -86,7 +67,7 @@ function toggleFullscreen() {
     if (!document.fullscreenElement) {
       elem.requestFullscreen().catch(err => {
         console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-        sleep(2000);
+        //sleep(2000);
         //toggleFullscreen();
       });
     } else {
@@ -94,30 +75,14 @@ function toggleFullscreen() {
     }
   }
 
-function openFullScreenMode() {    
-    if (bgDoc.requestFullscreen) {
-        const p = el.webkitRequestFullScreen();
-    p.then(() => {console.log('full screen')});
-        bgDoc.requestFullscreen();
-    } else if (bgDoc.webkitRequestFullscreen) { // Chrome, Safari (webkit)
-        bgDoc.webkitRequestFullscreen();
-    } else if (bgDoc.mozRequestFullScreen) { // Firefox
-        bgDoc.mozRequestFullScreen();
-    } else if (bgDoc.msRequestFullscreen) { // IE or Edge
-        bgDoc.msRequestFullscreen();
-    }
-}
 
 try {
     setTimeout(() => {
-        //openFullScreenMode();
         toggleFullscreen();
-        //openFullscreen();
     }, 3000);
 } catch (error) {
         console.log("에러발생 : " + error);
-        //var queryStr = qt;
-        //window.location.href ="/?t="+queryStr+"&bg="+bg;
+        window.location.href ="/?t="+queryStr+"&bg="+bg;
 }
 
 

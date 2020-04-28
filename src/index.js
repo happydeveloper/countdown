@@ -69,12 +69,16 @@ function openFullScreenMode() {
         bgDoc.msRequestFullscreen();
     }
 }
+
 try {
     window.openFullScreenMode();
 } catch (error) {
     console.log("에러발생 : " + error);
     var queryStr = qt;
-    window.location.href ="/?t="+queryStr+"&bg="+bg;
+    setTimeout(() => {
+        window.location.href ="/?t="+queryStr+"&bg="+bg;
+    }, 1500);
+    
 }
 
 

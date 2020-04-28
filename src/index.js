@@ -72,6 +72,7 @@ function toggleFullscreen() {
 
 try {
     setTimeout(() => {
+        document.querySelector('body')
         toggleFullscreen();
     }, 1000);
 } catch (error) {

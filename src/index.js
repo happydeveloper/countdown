@@ -55,7 +55,6 @@ if(bg = getQueryVariable('bg')) {
 
 var container = document.querySelector('#container');
 //전체화면 스크립트
-var docV = ;
 // 전체화면 설정
 function openFullScreenMode(docV) {
     if (docV.requestFullscreen)

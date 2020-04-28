@@ -58,7 +58,7 @@ var container = document.querySelector('#container');
 
 function toggleFullscreen() {
     let elem = document.querySelector("body");
-    debugger;
+    //debugger;
     elem.click();
     if (!document.fullscreenElement) {
       elem.requestFullscreen().catch(err => {

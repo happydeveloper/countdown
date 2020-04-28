@@ -73,7 +73,7 @@ function toggleFullscreen() {
 document.querySelector('body').addEventListener('click',
 function(event){
     window.scrollTo(0,1);
-    toggleFullscreen();
+    //toggleFullscreen();
 });
 // try {
 //     setTimeout(() => {

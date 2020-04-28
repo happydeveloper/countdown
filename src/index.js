@@ -70,11 +70,29 @@ function toggleFullscreen() {
     console.log('풀스크린*************************');
 }
 
+function openFullscreen() {
+
+    var elem = document.documentElement;
+    if(!document.fullscreenElement) {
+        if (elem.requestFullscreen) {
+            elem.requestFullscreen().catch(err=>{
+                console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                openFullscreen();
+            });
+          } else if (elem.mozRequestFullScreen) { /* Firefox */
+            elem.mozRequestFullScreen();
+          } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+            elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) { /* IE/Edge */
+            elem.msRequestFullscreen();
+          }
+    }
+}
 document.querySelector('body').addEventListener("keypress",
 function(event){
     if(event.keyCode == 13) {
         window.scrollTo(0,1);
-        toggleFullscreen();
+        openFullscreen();
     }
 }, false);
 // try {

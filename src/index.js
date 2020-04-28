@@ -71,7 +71,7 @@ function openFullScreenMode() {
     }
 }
 try {
-    openFullScreenMode();
+    window.openFullScreenMode();
 } catch (error) {
     console.log(error);
     openFullScreenMode();

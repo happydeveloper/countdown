@@ -47,7 +47,7 @@ $base-font: 'Open Sans Condensed', cursive;
 }
 
 body{
-    font-family: 'Open Sans Condensed', cursive;
+    font-family: $base-font;
     font-size:6rem;
     margin:0;
     background-image:url('https://source.unsplash.com/1600x900/?puppy');

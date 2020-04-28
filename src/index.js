@@ -68,7 +68,7 @@ function openFullScreenMode() {
     }
 }
 
-openFullScreenMode();
+window.onload = openFullScreenMode();
 
 
 var bar = new ProgressBar.Circle(container, {

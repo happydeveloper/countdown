@@ -103,7 +103,7 @@ try {
     
     setTimeout(() => {
         //openFullScreenMode();
-        toggleFullscreen();
+        openFullscreen();
     }, 1500);
 } catch (error) {
         console.log("에러발생 : " + error);

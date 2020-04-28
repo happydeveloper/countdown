@@ -64,7 +64,7 @@ function openFullscreen() {
         if (elem.requestFullscreen) {
             elem.requestFullscreen().catch(err=>{
                 console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-
+                openFullscreen();
             });
           } else if (elem.mozRequestFullScreen) { /* Firefox */
             elem.mozRequestFullScreen();
@@ -105,7 +105,6 @@ function openFullScreenMode() {
 }
 
 try {
-    
     setTimeout(() => {
         openFullScreenMode();
         //toggleFullscreen();

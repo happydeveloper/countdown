@@ -34,8 +34,9 @@ function openFullScreenMode() {
     }
 }
 
-var elem = document.documentElement;
 function openFullscreen() {
+
+    var elem = document.documentElement;
     if(!document.fullscreenElement) {
         if (elem.requestFullscreen) {
             elem.requestFullscreen().catch(err=>{

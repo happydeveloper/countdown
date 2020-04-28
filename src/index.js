@@ -63,7 +63,8 @@ function openFullscreen() {
     if(!document.fullscreenElement) {
         if (elem.requestFullscreen) {
             elem.requestFullscreen().catch(err=>{
-                console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`)
+                console.log(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                
             });
           } else if (elem.mozRequestFullScreen) { /* Firefox */
             elem.mozRequestFullScreen();

@@ -106,8 +106,8 @@ function openFullScreenMode() {
 
 try {
     setTimeout(() => {
-        openFullScreenMode();
-        //toggleFullscreen();
+        //openFullScreenMode();
+        toggleFullscreen();
         //openFullscreen();
     }, 1500);
 } catch (error) {

@@ -10,10 +10,9 @@
 
 #ver{
     display: grid;
-    grid-template-columns: 1fr 400px 1fr;
+    grid-template-rows: 1fr 400px 1fr;
     height:100vh;
 }
-
 .o2info{
     display: none;
     text-decoration: none;

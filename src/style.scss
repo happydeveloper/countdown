@@ -3,16 +3,15 @@
 @import '~animate.css/animate.min';
 @import '~animate.css/source/_base';
 
-#hor {
+#hor, #ver {
     display: grid;
     grid-template-columns: 1fr 400px 1fr;
 }
 
 #ver{
-    display: grid;
-    grid-template-rows: 1fr 400px 1fr;
     height:100vh;
 }
+
 .o2info{
     display: none;
     text-decoration: none;

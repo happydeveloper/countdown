@@ -24,11 +24,7 @@
     right: 10px;
     font-size:1rem;
 }
-.githubinfo a{
-    color:white;
-    text-decoration: none;
-    font-family: 'Open Sans Condensed', sans-serif;
-}
+
 
 .dest{
     padding: 0;
@@ -51,4 +47,12 @@ body{
     background-size:cover;
     overflow:hidden;
     backdrop-filter: grayscale(100%);    
+}
+
+.githubinfo {
+     a{
+        color:white;
+        text-decoration: none;
+        font-family: 'Open Sans Condensed', sans-serif;
+     }
 }

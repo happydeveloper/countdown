@@ -68,7 +68,7 @@ function toggleFullscreen() {
     }
 }
 
-document.querySelector('body').addEventListener('click',toggleFullscreen()
+document.querySelector('body').addEventListener('click',toggleFullscreen());
 // try {
 //     setTimeout(() => {
 //         )

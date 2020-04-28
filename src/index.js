@@ -55,10 +55,18 @@ if(bg = getQueryVariable('bg')) {
 
 var container = document.querySelector('#container');
 //전체화면 스크립트
-var bgDoc = document.documentElement; //백그라운드 문서
-//bgDoc.requestFullscreen();
-bgDoc.webkitRequestFullscreen();
-//동작확인
+var docV = document.documentElement;
+// 전체화면 설정
+function openFullScreenMode() {
+    if (docV.requestFullscreen)
+        docV.requestFullscreen();
+    else if (docV.webkitRequestFullscreen) // Chrome, Safari (webkit)
+        docV.webkitRequestFullscreen();
+    else if (docV.mozRequestFullScreen) // Firefox
+        docV.mozRequestFullScreen();
+    else if (docV.msRequestFullscreen) // IE or Edge
+        docV.msRequestFullscreen();
+}
 
 var bar = new ProgressBar.Circle(container, {
     duration: duration,

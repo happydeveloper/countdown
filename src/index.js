@@ -153,6 +153,7 @@ var bar = new ProgressBar.Circle(container, {
         } else {
             destElem = '<div class="dest">'+dest+'</div>';
             circle.setText(destElem+m+':'+s);
+            bar.path.setAttribute('stroke','rgba(0,255,0,0.7)')
         }
     }
 });

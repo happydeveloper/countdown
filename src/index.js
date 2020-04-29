@@ -107,7 +107,7 @@ var bar = new ProgressBar.Circle(container, {
     },
     strokeWidth:10,
     trailColor: 'rgba(0,0,0,0.8)',
-    color:'rgba(0,255,0,0.8)',
+    color:'rgba(0,255,0,0.7)',
     text: {
         value: 'Text'
     },
@@ -148,11 +148,14 @@ var bar = new ProgressBar.Circle(container, {
             circle.setText(s);
             if(bar){
                 bar.text.style.color='rgba(255,0,0,1)';
-                bar.path.setAttribute('stroke','rgba(255,0,0,1)')
+                bar.path.setAttribute('stroke','rgba(255,0,0,0.7)')
             }
         } else {
             destElem = '<div class="dest">'+dest+'</div>';
             circle.setText(destElem+m+':'+s);
+            if(bar) {
+            bar.path.setAttribute('stroke','rgba(0,255,0,0.5)')
+            }
         }
     }
 });

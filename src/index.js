@@ -107,7 +107,7 @@ var bar = new ProgressBar.Circle(container, {
     },
     strokeWidth:10,
     trailColor: 'rgba(0,0,0,0.8)',
-    color:'rgba(0,255,0,0.8)',
+    color:'rgba(0,255,0,0.7)',
     text: {
         value: 'Text'
     },

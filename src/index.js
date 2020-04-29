@@ -154,7 +154,7 @@ var bar = new ProgressBar.Circle(container, {
             destElem = '<div class="dest">'+dest+'</div>';
             circle.setText(destElem+m+':'+s);
             if(bar) {
-            bar.path.setAttribute('stroke','rgba(0,255,0,0.7)')
+            bar.path.setAttribute('stroke','rgba(0,255,0,0.5)')
             }
         }
     }
